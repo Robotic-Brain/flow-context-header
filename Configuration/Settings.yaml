@@ -5,6 +5,6 @@ TYPO3:
         'postprocess':
           chain:
             'custom':
-              component: 'RoboticBrain\FlowContextHeader\Http\Component\FlowContextHeader'
+              component: 'RoboticBrain\FlowContextHeader\HttpHeaderComponent'
               componentOptions:
                 'headerName': 'X-ACTUAL_FLOW_CONTEXT'

@@ -1,5 +1,5 @@
 <?php
-namespace RoboticBrain\FlowContextHeader\Http\Component;
+namespace RoboticBrain\FlowContextHeader;
 
 /*                                                                        *
  * This script belongs to the TYPO3 Flow package "RoboticBrain.FlowContextHeader".*
@@ -11,7 +11,7 @@ use TYPO3\Flow\Http\Component\ComponentContext;
 use TYPO3\Flow\Annotations as Flow;
 use RoboticBrain\FlowContextHeader\BootstrapProxy;
 
-class FlowContextHeader implements ComponentInterface {
+class HttpHeaderComponent implements ComponentInterface {
 	
 	/**
 	 * @Flow\Inject
