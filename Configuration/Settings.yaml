@@ -1,0 +1,10 @@
+TYPO3:
+  Flow:
+    http:
+      chain:
+        'postprocess':
+          chain:
+            'custom':
+              component: 'RoboticBrain\FlowContextHeader\Http\Component\FlowContextHeader'
+              componentOptions:
+                'headerName': 'X-ACTUAL_FLOW_CONTEXT'
