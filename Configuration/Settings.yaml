@@ -1,10 +1,12 @@
+# START SPHINX INCLUDE1
 TYPO3:
   Flow:
     http:
       chain:
         'postprocess':
           chain:
-            'custom':
-              component: 'RoboticBrain\FlowContextHeader\HttpHeaderComponent'
+            'RoboticBrain\FlowContextHeader':
               componentOptions:
-                'headerName': 'X-ACTUAL_FLOW_CONTEXT'
+                'headerName': 'X-ACTUAL_FLOW_CONTEXT'  # This is the default value
+# END SPHINX INCLUDE1
+              component: 'RoboticBrain\FlowContextHeader\HttpHeaderComponent'
