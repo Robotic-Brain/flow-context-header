@@ -9,15 +9,14 @@ namespace RoboticBrain\FlowContextHeader;
 use TYPO3\Flow\Http\Component\ComponentInterface;
 use TYPO3\Flow\Http\Component\ComponentContext;
 use TYPO3\Flow\Annotations as Flow;
-use RoboticBrain\FlowContextHeader\BootstrapProxy;
 
 class HttpHeaderComponent implements ComponentInterface {
 	
 	/**
 	 * @Flow\Inject
-	 * @var BootstrapProxy
+	 * @var \TYPO3\Flow\Object\ObjectManagerInterface
 	 */
-	protected $bootstrapProxy;
+	protected $objectManager;
 	
 	/**
 	 * @var array
@@ -37,6 +36,6 @@ class HttpHeaderComponent implements ComponentInterface {
 	 */
 	public function handle(ComponentContext $componentContext) {
 		$httpResponse = $componentContext->getHttpResponse();
-		$httpResponse->setHeader($this->options['headerName'], $this->bootstrapProxy->getBootstrapInstance()->getContext()->__toString());
+		$httpResponse->setHeader($this->options['headerName'], $this->objectManager->getContext()->__toString());
 	}
 }
