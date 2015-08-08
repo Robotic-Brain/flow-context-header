@@ -1,7 +1,17 @@
 {
-    "name": "roboticbrain/flow-context-header",
+    "name": "robotic-brain/flow-context-header",
     "type": "typo3-flow-package",
-    "description": "Add description here",
+    "description": "A simple helper package to see the active flow context from your client.",
+    "license": "GPL-3.0+",
+    "homepage": "https://github.com/Robotic-Brain/flow-context-header",
+    "authors": [
+        {
+            "name": "Robotic-Brain",
+            "email": "composer@roboticbrain.de",
+            "homepage": "http://roboticbrain.de",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "typo3/flow": "*"
     },
