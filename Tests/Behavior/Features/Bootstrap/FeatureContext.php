@@ -33,4 +33,47 @@ class FeatureContext extends MinkContext {
 	public function iShouldSeeSomeOutputFromBehat() {
 		return TRUE;
 	}
+
+	/**
+     * @Given /^the current active context is "([^"]*)"$/
+     */
+    public function theCurrentActiveContextIs($arg1)
+    {
+        $actualContext = $this->objectManager->getContext()->__toString();
+        if ($actualContext !== $arg1) {
+            throw new Exception("Actually switching the active context is not supported! Ctx: ".$actualContext);
+        }
+    }
+
+    /**
+     * @Given /^the header is configured to be "([^"]*)"$/
+     */
+    public function theHeaderIsConfiguredToBe($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @When /^I visit an URL$/
+     */
+    public function iVisitAnUrl()
+    {
+        $this->visit("/");
+    }
+
+    /**
+     * @Then /^the response should contain the HTTP header "([^"]*)"$/
+     */
+    public function theResponseShouldContainTheHttpHeader($arg1)
+    {
+        throw new PendingException();
+    }
+
+    /**
+     * @Given /^the value of the HTTP header should be "([^"]*)"$/
+     */
+    public function theValueOfTheHttpHeaderShouldBe($arg1)
+    {
+        throw new PendingException();
+    }
 }
