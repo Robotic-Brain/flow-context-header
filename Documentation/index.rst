@@ -35,4 +35,4 @@ To enable context selection by the browser, add something like this to the top o
    </IfModule>
 
 .. danger::
-   This might pose some serious security threat!
+   This might pose some serious security threats!
